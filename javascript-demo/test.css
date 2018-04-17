@@ -1,0 +1,13 @@
+#box   {
+    background: #333;
+    overflow: hidden;
+    color:#fff;
+    width: 100%
+    
+}
+td{
+    border:1px solid #ddd;
+}
+#item{
+    float: left;
+}

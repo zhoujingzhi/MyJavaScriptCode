@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>学习</title>
+    <style type="text/css">
+        
+    </style>
+
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+   
+    <button type="button" class="btn btn-success">添加开始节点</button>
+    
+    <button type="button" class="btn btn-warning">添加过程节点</button>
+    
+    <button type="button" class="btn btn-danger">添加结束节点</button>
+    
+    <div></div>
+    <div class="menu">
+        <div class="save">保存</div>
+    </div>
+    <div id="container" class="wrap">
+
+    </div>
+    <!--增加节点-->
+    <div class="todoMenu wrapMenu" style="display: none">
+        <div id="addNode">增加节点</div>
+        <!-- <div id="addApartNode">增加分支节点</div> -->
+    </div>
+    <!--节点操作-->
+    <div class="todoMenu nodeMenu" style="display: none;">
+        <div class="nodeInfo">节点信息</div>
+        <div class="deleteNode">删除节点</div>
+        <div class="nodeSet">节点设置</div>
+    </div>
+    <div class="todoMenu pathMenu">
+        <div class="pathSet">连接设置</div>
+        <div class="deletePath">删除连接</div>
+    </div>
+    <script type="text/javascript" src="js/jquery-3.1.1.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.11.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.jsPlumb-1.7.2.js"></script>
+    <script type="text/javascript" src="js/data.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</body>
+
+</html>
