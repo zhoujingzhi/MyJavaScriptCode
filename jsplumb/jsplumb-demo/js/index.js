@@ -167,6 +167,7 @@ $(function(){
         var conns = instance.getAllConnections();//获取所有连线
         var windows = jsPlumb.getSelector("#container .item");//获取所有节点
         console.log(conns);
+        console.log(windows);
 
     });
     //获取label的联系
