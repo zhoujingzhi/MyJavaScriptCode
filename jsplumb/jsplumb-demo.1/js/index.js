@@ -8,7 +8,7 @@ define(['jsPlumb','js/data'], function () {
             HoverPaintStyle: { strokeStyle: "#1e8151", lineWidth: 2 },
             ConnectionOverlays: [
                 ["Arrow", { location: 1, id: "arrow", length: 10, foldback: 0.8, width: 10 }],
-                // ["Label", { label: "", id: "label", cssClass: "labelstyle" }]
+                ["Label", { label: "", id: "label", cssClass: "labelstyle" }]
             ],
             DragOptions: { zIndex: 2000 },
             Container: "topocontent"
@@ -179,11 +179,11 @@ define(['jsPlumb','js/data'], function () {
         /*连线后触发*/
         instance.bind("connection", function (info) {
 
-            var labelText = '';
-            var connInfo = { sourceID: info.sourceId, targetId: info.targetId, };
+            var labelText = '同意';
+            var connInfo = { sourceID: info.sourceId, targetId: info.targetId, labelText: labelText };
             connArr.push(connInfo);
             info.connection.id = '0001';
-            // info.connection.setLabel(labelText);
+            info.connection.setLabel(labelText);
             console.log(info);
             if (info.sourceId == info.targetId) {
                 alert('不能让以自己为目标元素');

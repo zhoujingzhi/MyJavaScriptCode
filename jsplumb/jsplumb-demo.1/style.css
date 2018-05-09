@@ -1,0 +1,62 @@
+html,
+        body,
+        div,
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body,
+        #container {
+            height: 100%;
+        }
+
+        #container {
+            position: relative;
+        }
+
+        #container .item {
+            position: absolute;
+            border: 1px solid #000;
+            padding: 10px;
+            padding-right: 25px;
+            border-radius: 5px;
+            cursor: move;
+        }
+
+        #container .item .dragPoint {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 1px solid #000;
+            border-radius: 3px;
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            cursor: pointer;
+        }
+        /*label样式*/
+
+        #container ._jsPlumb_overlay {
+            padding: 6px;
+            font-size: 14px;
+            background: #fff;
+            border: 1px solid #00bb00;
+            border-radius: 3px;
+        }
+
+        #container svg path {
+            stroke-width: 2;
+            cursor: pointer;
+        }
+        /*鼠标移入后前后变色*/
+
+        #container ._jsPlumb_target_hover {
+            background: #00a3ff;
+        }
+
+        #container ._jsPlumb_source_hover {
+            background: #00a3ff;
+        }

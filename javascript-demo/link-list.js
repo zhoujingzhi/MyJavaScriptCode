@@ -30,15 +30,22 @@ function LinkedList() {
     this.getHead = function () {
         return head
     };
-    this.insert = function (position, item) {
-
+    /**
+     * 指定位置插入元素
+     * @param {Number} index 
+     * @param {*} item 
+     */
+    this.insert = function (index, item) {
+        //判断边界
     };
     /**
      * 删除目标元素的索引
-     * @param {*} index 
+     * @param {Number} index 
      */
     this.removeAt = function (index) {
-        if (typeof index != 'number' || index % 1 != 0 && index < 0 || index > length) return head;
+        //判断边界
+        //判断是否为整数 ES6 Number.isInteger(index)
+        if (!index || typeof index != 'number' || index % 1 != 0 || index < 0 || index > length) return null;
         let i = 0,
             current = head,//目标
             previous;//目标的上一个元素
@@ -52,7 +59,7 @@ function LinkedList() {
             }
             previous.next = current.next;//将目标上一个元素的next指向目标下一个元素
         };
-        return head
+        return current.item //返回目标元素的值
     }
 };
 var linkedList = new LinkedList();
