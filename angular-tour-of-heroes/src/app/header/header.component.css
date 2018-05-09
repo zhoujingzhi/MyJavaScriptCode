@@ -1,0 +1,12 @@
+.header {
+    height: 50px;
+    display: flex;
+    background: #00b8ff
+}
+.header .title {
+    flex: 1;
+    font-size: 20px;
+    text-align: center;
+    color: #fff;
+    line-height: 50px
+}
