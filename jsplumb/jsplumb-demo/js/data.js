@@ -20,7 +20,7 @@ var initialData = {
             "SourceId": "b5a84849-3553-4d52-9cdf-175bd1d21348",
             "TargetId": "b5a84849-3553-4d52-9cdf-175bd1d213148",
             "Text": "同意",
-            "JumpId": "6cd83ddf-b080-419b-99bb-b62537a8fc99"
+            // "ID": "aaaaaaaaaaaaaaaaaaaaaaa"
         },
     ]
    

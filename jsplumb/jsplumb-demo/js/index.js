@@ -6,7 +6,7 @@ define(['jsPlumb','js/data'], function () {
         var instance = jsPlumb.getInstance({
             Endpoint: ["Dot", { radius: 2 }],
             HoverPaintStyle: { strokeStyle: "#1e8151", lineWidth: 2 },
-            ConnectionOverlays: [
+            ConnectionConnectionOverlays: [
                 ["Arrow", { location: 1, id: "arrow", length: 10, foldback: 0.8, width: 10 }],
                 // ["Label", { label: "", id: "label", cssClass: "labelstyle" }]
             ],
@@ -54,9 +54,10 @@ define(['jsPlumb','js/data'], function () {
         }
         //添加连线
         function renderConnecter(jump) {
-
+            console.log(jump)
             var conor = instance.connect({ source: jump.SourceId, target: jump.TargetId });
             conor.getOverlay("label").setLabel(jump.Text);
+            conor.getOverlay("jumpID").setLabel(jump.ID);
             conor.setPaintStyle({ fillStyle: 'none', strokeStyle: '#2F8E00' });
             conor.bind('click', function () {
                 detachLine(this);
@@ -170,7 +171,7 @@ define(['jsPlumb','js/data'], function () {
             var conns = instance.getAllConnections();//获取所有连线
             var windows = jsPlumb.getSelector("#container .item");//获取所有节点
             console.log(conns);
-            console.log(windows);
+            // console.log(windows);
 
         });
         //获取label的联系
@@ -178,11 +179,11 @@ define(['jsPlumb','js/data'], function () {
 
         /*连线后触发*/
         instance.bind("connection", function (info) {
-
+            console.log(info)
             var labelText = '';
             var connInfo = { sourceID: info.sourceId, targetId: info.targetId, };
             connArr.push(connInfo);
-            info.connection.id = '0001';
+            // info.connection.id = '0001';
             // info.connection.setLabel(labelText);
             console.log(info);
             if (info.sourceId == info.targetId) {
